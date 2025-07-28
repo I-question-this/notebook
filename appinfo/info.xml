@@ -5,7 +5,7 @@
 	<name>Notebook</name>
 	<summary>Notebook example</summary>
 	<description>Complete app with navigation bar and database</description>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<licence>agpl</licence>
 	<author mail="tyler.westland@proton.me" homepage="">Tyler Westland</author>
 	<namespace>Notebook</namespace>

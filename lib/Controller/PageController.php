@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace OCA\NoteBook\Controller;
 
 use OCA\NoteBook\AppInfo\Application;
-// use OCA\NoteBook\Db\NoteMapper;
+use OCA\NoteBook\Db\NoteMapper;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\Attribute\FrontpageRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
@@ -26,7 +26,7 @@ class PageController extends Controller {
 		private IEventDispatcher $eventDispatcher,
 		private IInitialState $initialStateService,
 		private IConfig $config,
-//		private NoteMapper $noteMapper,
+		private NoteMapper $noteMapper,
 		private ?string $userId
 	) {
 		parent::__construct($appName, $request);
@@ -41,12 +41,11 @@ class PageController extends Controller {
 	#[FrontpageRoute(verb: 'GET', url: '/')]
 	public function index(): TemplateResponse {
 		$this->eventDispatcher->dispatchTyped(new RenderReferenceEvent());
-// 		try {
-// 			$notes = $this->noteMapper->getNotesOfUser($this->userId);
-// 		} catch (\Exception | \Throwable $e) {
-// 			$notes = [];
-// 		}
-		$notes = [];
+ 		try {
+ 			$notes = $this->noteMapper->getNotesOfUser($this->userId);
+ 		} catch (\Exception | \Throwable $e) {
+ 			$notes = [];
+ 		}
 		$selectedNoteId = (int) $this->config->getUserValue($this->userId, Application::APP_ID, 'selected_note_id', '0');
 		$state = [
 			'notes' => $notes,
