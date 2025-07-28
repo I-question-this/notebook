@@ -10,7 +10,7 @@ use OCP\DB\Types;
 use OCP\Migration\IOutput;
 use OCP\Migration\SimpleMigrationStep;
 
-class Version010100Date20230524153814 extends SimpleMigrationStep {
+class Version010100Date20250727223210 extends SimpleMigrationStep {
 
 	/**
 	 * @param IOutput $output
