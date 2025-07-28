@@ -1,12 +1,4 @@
 <?php
-
-declare(strict_types=1);
-
-use OCP\Util;
-
-Util::addScript(OCA\Notebook\AppInfo\Application::APP_ID, OCA\Notebook\AppInfo\Application::APP_ID . '-main');
-Util::addStyle(OCA\Notebook\AppInfo\Application::APP_ID, OCA\Notebook\AppInfo\Application::APP_ID . '-main');
-
+$appId = OCA\NoteBook\AppInfo\Application::APP_ID;
+\OCP\Util::addScript($appId, $appId . '-main');
 ?>
-
-<div id="notebook"></div>

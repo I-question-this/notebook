@@ -1,6 +1,6 @@
+import App from './views/App.vue'
 import Vue from 'vue'
-import App from './App.vue'
 Vue.mixin({ methods: { t, n } })
 
-const View = Vue.extend(App)
-new View().$mount('#notebook')
+const VueApp = Vue.extend(App)
+new VueApp().$mount('#content')
