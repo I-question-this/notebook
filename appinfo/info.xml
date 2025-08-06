@@ -2,13 +2,13 @@
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>notebook</id>
-	<name>Notebook</name>
-	<summary>Notebook example</summary>
+	<name>NoteBook</name>
+	<summary>NoteBook example</summary>
 	<description>Complete app with navigation bar and database</description>
 	<version>1.1.0</version>
 	<licence>agpl</licence>
 	<author mail="tyler.westland@proton.me" homepage="">Tyler Westland</author>
-	<namespace>Notebook</namespace>
+	<namespace>NoteBook</namespace>
 	<category>office</category>
 	<bugs>http://test.com</bugs>
 	<dependencies>
@@ -17,7 +17,7 @@
 	<navigations>
 		<navigation>
 			<id>notebook</id>
-			<name>Notebook</name>
+			<name>NoteBook</name>
 			<route>notebook.page.index</route>
 			<icon>app.svg</icon>
 			<type>link</type>
